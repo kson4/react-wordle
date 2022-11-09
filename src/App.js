@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import GetWord from "./GetWord";
+import getWord from "./functions/getWord";
+import Wordle from "./components/Wordle";
 
 function App() {
-  const [word, setWord] = useState();
+  const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    GetWord(setWord);
-  }, []);
+    getWord(setSolution);
+  }, [setSolution]);
 
   return (
     <div className="App">
       <h1>Wordle</h1>
-      <h2>{word}</h2>
+      {solution && <h2>The solution is: {solution}</h2>}
+      {solution && <Wordle solution={solution} />}
     </div>
   );
 }

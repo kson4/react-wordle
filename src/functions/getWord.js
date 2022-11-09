@@ -1,11 +1,11 @@
 import axios from "axios";
 
-function GetWord(setWord) {
+const getWord = (setSolution) => {
   axios
     .get("https://random-word-api.herokuapp.com/word?length=5")
     .then((res) => {
-      setWord(res.data[0]);
+      setSolution(res.data[0]);
     });
-}
+};
 
-export default GetWord;
+export default getWord;
