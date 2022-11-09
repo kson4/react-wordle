@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function Keyboard() {
+export default function Keyboard({ usedKeys }) {
   const [letters, setLetters] = useState([
     "Q",
     "W",
@@ -36,6 +36,14 @@ export default function Keyboard() {
     <div className="keyboard">
       {letters &&
         letters.map((l) => {
+          const color = usedKeys[l.toLowerCase()];
+          if (color !== undefined) {
+            return (
+              <div key={l} className={color}>
+                {l}
+              </div>
+            );
+          }
           return <div key={l}>{l}</div>;
         })}
     </div>

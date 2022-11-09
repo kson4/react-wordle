@@ -73,6 +73,21 @@ h1 {
   border-radius: 6px;
   line-height: 60px;
 }
+.keyboard > div.green {
+  background: #5ac85a;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.keyboard > div.yellow {
+  background: #e2cc68;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.keyboard > div.grey {
+  background: #a1a1a1;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
 
 @keyframes flip {
   0% {
