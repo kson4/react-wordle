@@ -59,6 +59,21 @@ h1 {
 .row.current > div.filled {
   animation: bounce 0.2s easy-in-out forwards;
 }
+
+.keyboard {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.keyboard > div {
+  margin: 2.5px;
+  width: 50px;
+  height: 55px;
+  background: #eee;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 60px;
+}
+
 @keyframes flip {
   0% {
     transform: rotateX(0);
